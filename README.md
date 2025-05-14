@@ -29,31 +29,35 @@ cd TaskTrackr
 
 ### 2. Backend
 1. Open backend/appsettings.json and set your PostgreSQL connection string:
-   json:
+```json   
 {
   "ConnectionStrings": {
     "DefaultConnection": "Host=localhost;Port=5432;Database=TaskTrackrDb;Username=<db_user>;Password=<db_password>"
   }
 }
+```
 2. Create the database and grant privileges:
-   bash:
+```bash
 psql -U postgres -c "CREATE DATABASE \"TaskTrackrDb\";"
 psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE \"TaskTrackrDb\" TO <db_user>;"
+```
 3. Run the API:
-   bash:
+```bash
 cd backend
 dotnet restore
 dotnet run
-
+```
 --The Web API will listen on http://localhost:5235 by default.--
 
 ### 3. Frontend
 1. In a new terminal, navigate to the client folder:
-   bash:
+```bash
 cd frontend
+```
 2. Install Dependencies:
-   bash:
+```bash
 npm i
 npm start
+```
 3.Open your browser at http://localhost:4200.
   All /api requests will be proxied to your running backend.
