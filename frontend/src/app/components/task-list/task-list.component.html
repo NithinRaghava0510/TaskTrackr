@@ -1,0 +1,13 @@
+<h2>Tasks</h2>
+<ul>
+  <li *ngFor="let t of tasks">
+    <div>
+      <input type="checkbox" [checked]="t.isComplete" (change)="toggle(t)" />
+      {{ t.title }}
+    </div>
+    <span class="actions">
+      <a [routerLink]="['/edit', t.id]">Edit</a>
+      <button (click)="delete(t.id)">Delete</button>
+    </span>
+  </li>
+</ul>

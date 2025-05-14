@@ -1,0 +1,54 @@
+h2 {
+  margin-bottom: 0.75rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+li input[type="checkbox"] {
+  margin-right: 0.75rem;
+}
+
+li .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+li .actions a,
+li .actions button {
+  background: none;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+li .actions button:hover,
+li .actions a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 600px) {
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  li .actions {
+    margin-top: 0.5rem;
+  }
+}

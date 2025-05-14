@@ -1,0 +1,15 @@
+<h2>{{ isEdit ? 'Edit Task' : 'Add Task' }}</h2>
+<form (ngSubmit)="submit()">
+  <label>Title:
+    <input [(ngModel)]="task.title" name="title" required />
+  </label><br/>
+  <label>Description:
+    <textarea [(ngModel)]="task.description" name="description"></textarea>
+  </label><br/>
+  <label>
+    <input type="checkbox" [(ngModel)]="task.isComplete" name="isComplete" />
+    Completed
+  </label><br/>
+  <button type="submit">{{ isEdit ? 'Update' : 'Create' }}</button>
+  <a routerLink="/">Cancel</a>
+</form>
